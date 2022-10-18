@@ -122,6 +122,7 @@ extension HomeViewController: UITableViewDataSource {
             scrollCell.therdContainerView.layer.borderColor = UIColor(named: Constants.storiesColor)?.cgColor
             scrollCell.fourContainerView.layer.borderColor = UIColor(named: Constants.storiesColor)?.cgColor
             return scrollCell
+            
         } else {
             
             guard
@@ -132,16 +133,14 @@ extension HomeViewController: UITableViewDataSource {
             let discription = users[indexPath.row].contentDiscription
             let userImage = UIImage(named: users[indexPath.row].userImageName ?? "")
             let contentImsge = UIImage(named: users[indexPath.row].contentImageName ?? "")
-            let str = users[indexPath.row].name ?? ""
-            let atribute = [NSAttributedString.Key.foregroundColor: UIColor.red]
-            let ddddd = NSMutableAttributedString(string: str, attributes: atribute)
+            let name = users[indexPath.row].name ?? ""
             
             cell.nameLabel.text = users[indexPath.row].name
             cell.contentImageView.image = contentImsge
             cell.avatarImageView.image = userImage
             cell.commentAvatarImageView.image = UIImage(named: Constants.userImageName)
             cell.likeCountLabel.text = "\(Constants.likeText) \(users[indexPath.row].contentLikeCount ?? 0)"
-            cell.discriptionLabel.text = str + " " + (discription ?? "")
+            cell.discriptionLabel.text = name + " " + (discription ?? "")
             return cell
         }
     }
