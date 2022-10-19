@@ -11,10 +11,10 @@ import UIKit
 final class HomeTableViewCell: UITableViewCell {
 
     // MARK: - IBOutlets
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var contentImageView: UIImageView!
-    @IBOutlet weak var avatarImageView: UIImageView!
-    @IBOutlet weak var commentAvatarImageView: UIImageView!
-    @IBOutlet weak var discriptionLabel: UILabel!
-    @IBOutlet weak var likeCountLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var contentImageView: UIImageView!
+    @IBOutlet private weak var avatarImageView: UIImageView!
+    @IBOutlet private weak var commentAvatarImageView: UIImageView!
+    @IBOutlet private weak var discriptionLabel: UILabel!
+    @IBOutlet private weak var likeCountLabel: UILabel!
 }

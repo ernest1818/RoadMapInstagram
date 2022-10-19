@@ -11,12 +11,12 @@ import UIKit
 final class ReccomendationTableViewCell: UITableViewCell {
 
     // MARK: - IBOutlets
-    @IBOutlet weak var firstContainerView: UIView!
+    @IBOutlet private weak var firstContainerView: UIView!
     
-    @IBOutlet weak var secondContainerView: UIView!
+    @IBOutlet private weak var secondContainerView: UIView!
     
-    @IBOutlet weak var therdContainerView: UIView!
+    @IBOutlet private weak var therdContainerView: UIView!
     
-    @IBOutlet weak var fourContainerView: UIView!
+    @IBOutlet private weak var fourContainerView: UIView!
     
 }

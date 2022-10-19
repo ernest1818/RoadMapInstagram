@@ -40,8 +40,8 @@ final class HomeViewController: UIViewController {
     }
     
     // MARK: - IBOutlets
-    @IBOutlet weak var homeTableView: UITableView!
-    @IBOutlet weak var myImageView: UIImageView!
+    @IBOutlet private weak var homeTableView: UITableView!
+    @IBOutlet private weak var myImageView: UIImageView!
     
     // MARK: - Private variables
     private var users: [Users] = [Users(name: Constants.firstUserName,
@@ -93,7 +93,7 @@ final class HomeViewController: UIViewController {
         homeTableView.addSubview(refresh)
     }
     
-    @objc func refreshedAction() {
+    @objc private func refreshedAction() {
         homeTableView.reloadData()
         refresh.endRefreshing()
     }
