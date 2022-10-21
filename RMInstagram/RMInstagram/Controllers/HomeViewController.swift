@@ -11,6 +11,7 @@ import UIKit
 final class HomeViewController: UIViewController {
     
     private enum Constants {
+        static let segueIdentifire = "stories"
         static let cellIdentifire = "oneCell"
         static let scrollCellIdentifire = "scrollCell"
         static let likeText = "Нравиться: "
@@ -19,6 +20,8 @@ final class HomeViewController: UIViewController {
         static let firstUsersImageName = "scroll1"
         static let firstContentImageName = "11"
         static let firstContentDiscription = "как тебе такое Илон Маск"
+        static let firstName = "liza.boss"
+        static let firstAvatarImageName = "3"
         static let firstContentLikeCount = 123
         static let secondUserName = "moroz.pochyi"
         static let therdUserName = "garri.gudini777"
@@ -41,6 +44,7 @@ final class HomeViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var homeTableView: UITableView!
+    @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet private weak var myImageView: UIImageView!
     
     // MARK: - Private variables
@@ -72,11 +76,33 @@ final class HomeViewController: UIViewController {
         setupUI()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == Constants.segueIdentifire else { return }
+        guard
+            let storiesVC = segue.destination as? StoriesViewController
+        else {
+            return
+        }
+        storiesVC.nameText = Constants.firstName
+        storiesVC.imageName = Constants.firstAvatarImageName
+        
+    }
+    
+    // MARK: - Private IBActions
+    @IBAction private func lizaAction(_ sender: Any) {
+        
+    }
+    
     // MARK: - Private Methods
     private func setupUI() {
         createTableView()
         createProfile()
         createRefresh()
+        createFirstLabel()
+    }
+    
+    private func createFirstLabel() {
+        firstNameLabel.text = Constants.firstName
     }
     
     private func createTableView() {
@@ -141,7 +167,27 @@ extension HomeViewController: UITableViewDataSource {
             cell.commentAvatarImageView.image = UIImage(named: Constants.userImageName)
             cell.likeCountLabel.text = "\(Constants.likeText) \(users[indexPath.row].contentLikeCount ?? 0)"
             cell.discriptionLabel.text = name + " " + (discription ?? "")
+            cell.discriptionLabel.attributedText = setupDeliveryDateLabel(post: users[indexPath.row])
             return cell
         }
+    }
+}
+
+extension HomeViewController {
+    func setupDeliveryDateLabel(post: Users) -> NSMutableAttributedString {
+        let secondText = "\(post.contentDiscription ?? "")"
+        let myMutableString = NSMutableAttributedString(string:
+                                                            "\(post.name ?? "") \(secondText)")
+        myMutableString.addAttribute(
+            NSAttributedString.Key.font,
+            value: UIFont.systemFont(ofSize: 14, weight: .bold),
+            range: NSRange(location: 0, length: post.name?.count ?? 0)
+        )
+        myMutableString.addAttribute(
+            NSAttributedString.Key.font,
+            value: UIFont.systemFont(ofSize: 14, weight: .regular),
+            range: NSRange(location: post.name?.count ?? 0, length: secondText.count)
+        )
+        return myMutableString
     }
 }

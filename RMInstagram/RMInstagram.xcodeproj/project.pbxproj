@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88467645290066AB00FD3223 /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88467644290066AB00FD3223 /* LikeTableViewCell.swift */; };
+		884676472900823400FD3223 /* FollowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884676462900823400FD3223 /* FollowCell.swift */; };
+		88467649290086BC00FD3223 /* UsersNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88467648290086BC00FD3223 /* UsersNotifications.swift */; };
+		8846764B290174DD00FD3223 /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846764A290174DD00FD3223 /* StoriesViewController.swift */; };
+		8846764D2901D18D00FD3223 /* video.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 8846764C2901D18D00FD3223 /* video.MOV */; };
 		88571B9C28FD61E0001D081E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88571B9B28FD61E0001D081E /* AppDelegate.swift */; };
 		88571B9E28FD61E0001D081E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88571B9D28FD61E0001D081E /* SceneDelegate.swift */; };
 		88571BA028FD61E0001D081E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88571B9F28FD61E0001D081E /* HomeViewController.swift */; };
@@ -18,9 +23,15 @@
 		88571BB628FDF9A0001D081E /* UsersInProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88571BB528FDF9A0001D081E /* UsersInProject.swift */; };
 		88571BB828FEB480001D081E /* ReccomendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88571BB728FEB480001D081E /* ReccomendationTableViewCell.swift */; };
 		88571BBC28FEF9F4001D081E /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88571BBB28FEF9F4001D081E /* ReelsViewController.swift */; };
+		88571BC229003253001D081E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88571BC129003253001D081E /* NotificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88467644290066AB00FD3223 /* LikeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeTableViewCell.swift; sourceTree = "<group>"; };
+		884676462900823400FD3223 /* FollowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowCell.swift; sourceTree = "<group>"; };
+		88467648290086BC00FD3223 /* UsersNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersNotifications.swift; sourceTree = "<group>"; };
+		8846764A290174DD00FD3223 /* StoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
+		8846764C2901D18D00FD3223 /* video.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.MOV; sourceTree = "<group>"; };
 		88571B9828FD61E0001D081E /* RMInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88571B9B28FD61E0001D081E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88571B9D28FD61E0001D081E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +45,7 @@
 		88571BB528FDF9A0001D081E /* UsersInProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInProject.swift; sourceTree = "<group>"; };
 		88571BB728FEB480001D081E /* ReccomendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReccomendationTableViewCell.swift; sourceTree = "<group>"; };
 		88571BBB28FEF9F4001D081E /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
+		88571BC129003253001D081E /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +85,7 @@
 				88571BA128FD61E0001D081E /* Main.storyboard */,
 				88571BBE28FF4C7F001D081E /* Controllers */,
 				88571BA428FD61E1001D081E /* Assets.xcassets */,
+				8846764C2901D18D00FD3223 /* video.MOV */,
 				88571BA628FD61E1001D081E /* LaunchScreen.storyboard */,
 				88571BA928FD61E1001D081E /* Info.plist */,
 				88571BB228FDE4A8001D081E /* Fonts */,
@@ -91,7 +104,9 @@
 		88571BBE28FF4C7F001D081E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8846764A290174DD00FD3223 /* StoriesViewController.swift */,
 				88571B9F28FD61E0001D081E /* HomeViewController.swift */,
+				88571BC129003253001D081E /* NotificationViewController.swift */,
 				88571BBB28FEF9F4001D081E /* ReelsViewController.swift */,
 			);
 			path = Controllers;
@@ -102,6 +117,8 @@
 			children = (
 				88571BB728FEB480001D081E /* ReccomendationTableViewCell.swift */,
 				88571BB028FD8722001D081E /* HomeTableViewCell.swift */,
+				88467644290066AB00FD3223 /* LikeTableViewCell.swift */,
+				884676462900823400FD3223 /* FollowCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				88571BB528FDF9A0001D081E /* UsersInProject.swift */,
+				88467648290086BC00FD3223 /* UsersNotifications.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88571BA828FD61E1001D081E /* LaunchScreen.storyboard in Resources */,
+				8846764D2901D18D00FD3223 /* video.MOV in Resources */,
 				88571BA528FD61E1001D081E /* Assets.xcassets in Resources */,
 				88571BA328FD61E0001D081E /* Main.storyboard in Resources */,
 				88571BB428FDE4CE001D081E /* SFProText-Regular.ttf in Resources */,
@@ -211,6 +230,11 @@
 			files = (
 				88571BA028FD61E0001D081E /* HomeViewController.swift in Sources */,
 				88571B9C28FD61E0001D081E /* AppDelegate.swift in Sources */,
+				88467649290086BC00FD3223 /* UsersNotifications.swift in Sources */,
+				88571BC229003253001D081E /* NotificationViewController.swift in Sources */,
+				88467645290066AB00FD3223 /* LikeTableViewCell.swift in Sources */,
+				884676472900823400FD3223 /* FollowCell.swift in Sources */,
+				8846764B290174DD00FD3223 /* StoriesViewController.swift in Sources */,
 				88571BB128FD8722001D081E /* HomeTableViewCell.swift in Sources */,
 				88571BB628FDF9A0001D081E /* UsersInProject.swift in Sources */,
 				88571BBC28FEF9F4001D081E /* ReelsViewController.swift in Sources */,
