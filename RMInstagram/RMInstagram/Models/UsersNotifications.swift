@@ -14,7 +14,7 @@ struct UsersNotifications {
         case likeVideo = "нравиться ваше видео."
         case likePhoto = "нравиться ваше фото."
         case likeComment = "понравился ваш комментарий."
-        case prioritetFollow = "есть в Instagramm. Вы можете знать этого человека."
+        case prioritetFollow = "есть в Instagramm. Вы можете знать этого"
         case following = "подписался(-ась) на ваши обновления."
     }
     

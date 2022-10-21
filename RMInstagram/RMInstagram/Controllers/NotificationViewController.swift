@@ -8,9 +8,9 @@
 import UIKit
 
 /// Экран уведомлений
-class NotificationViewController: UIViewController {
+final class NotificationViewController: UIViewController {
     
-    private enum TableSectionTypes: Comparable {
+    private enum TableSectionType: Comparable {
         case today
         case yesterday
         case lastWeek
@@ -18,7 +18,7 @@ class NotificationViewController: UIViewController {
         case previously
     }
     
-    private enum TableCellsTypes {
+    private enum TableCellType {
         case likeCell
         case followCell
     }
@@ -46,7 +46,7 @@ class NotificationViewController: UIViewController {
         static let secondContentImageName = "6"
         static let therdContentImageName = "7"
         static let fourContentImageName = "8"
-        static let whiteBlackColor = "myWhiteColor"
+        static let whiteBlackColorName = "myWhiteColor"
         static let time = "2 минуты назад"
     }
     
@@ -54,9 +54,9 @@ class NotificationViewController: UIViewController {
     @IBOutlet private weak var notificationTableView: UITableView!
     
     // MARK: - private variables
-    private let sectionTypes: [TableSectionTypes] = [.today, .yesterday, .lastWeek, .thisMonth, .previously]
+    private let sectionTypes: [TableSectionType] = [.today, .yesterday, .lastWeek, .thisMonth, .previously]
     
-    private let cellTypes: [TableCellsTypes] = [.likeCell, .followCell]
+    private let cellTypes: [TableCellType] = [.likeCell, .followCell]
     
     private let userNotification: [UsersNotifications] = [
         UsersNotifications(userName: Constants.firstUserName,
@@ -81,7 +81,7 @@ class NotificationViewController: UIViewController {
                            time: Constants.time)
     ]
     
-    private let refresh = UIRefreshControl()
+    private let refreshControl = UIRefreshControl()
     
     // MARK: - Life Cycles
     override func viewDidLoad() {
@@ -103,12 +103,12 @@ class NotificationViewController: UIViewController {
     }
     
     private func createRefresh() {
-        refresh.addTarget(self, action: #selector(refreshedAction), for: .valueChanged)
-        notificationTableView.addSubview(refresh)
+        refreshControl.addTarget(self, action: #selector(refreshedAction), for: .valueChanged)
+        notificationTableView.addSubview(refreshControl)
     }
     
     @objc private func refreshedAction() {
-        refresh.endRefreshing()
+        refreshControl.endRefreshing()
     }
 }
 
@@ -118,6 +118,7 @@ extension NotificationViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         sectionTypes.count
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         let type = sectionTypes[section]
@@ -147,22 +148,25 @@ extension NotificationViewController: UITableViewDataSource {
                     let likeCell = tableView.dequeueReusableCell(withIdentifier: Constants.likeIdentifire,
                                                                  for: indexPath) as? LikeTableViewCell
                 else { return UITableViewCell() }
-//                likeCell.backgroundColor = .black
+                
                 likeCell.contentConfig(notificationTypes)
                 return likeCell
+                
             } else {
+                
                 guard let followCell = tableView.dequeueReusableCell(withIdentifier: Constants.followIdentifire,
-                                                                     for: indexPath) as? FollowCell
+                                                                     for: indexPath) as? FollowViewCell
                 else { return UITableViewCell() }
-//                followCell.backgroundColor = .black
+                
                 followCell.configurationFollowCell(notificationTypes)
                 return followCell
             }
+            
         case 0, 2...:
             if actionType == .following || actionType == .prioritetFollow {
                 
                 guard let followCell = tableView.dequeueReusableCell(withIdentifier: Constants.followIdentifire,
-                                                                     for: indexPath) as? FollowCell
+                                                                     for: indexPath) as? FollowViewCell
                 else { return UITableViewCell() }
                 followCell.configurationFollowCell(notificationTypes)
                 return followCell
@@ -202,13 +206,12 @@ extension NotificationViewController: UITableViewDataSource {
         case 0:
             return 20
         case 1, 2...:
-            return 5
+            return 10
         default:
             break
         }
         return 5
     }
-    
 }
 
 // MARK: - UITableViewDelegate
@@ -216,8 +219,9 @@ extension NotificationViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let headerView = view as? UITableViewHeaderFooterView else { return }
         headerView.textLabel?.text = headerView.textLabel?.text?.capitalizedSentence
-        headerView.textLabel?.textColor = UIColor(named: Constants.whiteBlackColor)
-        headerView.textLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
+        headerView.textLabel?.textColor = UIColor(named: Constants.whiteBlackColorName)
+        headerView.textLabel?.font = .systemFont(ofSize: 15, weight: .semibold)
+        headerView.backgroundColor = .white
     }
 }
 

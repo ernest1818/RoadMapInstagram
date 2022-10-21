@@ -8,19 +8,15 @@
 import UIKit
 
 /// Ячейка уведомлений о подписчиках
-final class FollowCell: UITableViewCell {
+final class FollowViewCell: UITableViewCell {
     
     private enum Constants {
-        static let blackWhiteColor = "blackColor"
+        static let blackWhiteColorName = "blackColor"
     }
     
-    // MARK: - Public IBOutlets
-    @IBOutlet weak var userImageView: UIImageView!
-    @IBOutlet weak var followLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+    // MARK: - Private IBOutlets
+    @IBOutlet private weak var userImageView: UIImageView!
+    @IBOutlet private weak var followLabel: UILabel!
     
     // MARK: - Life cycles
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -61,7 +57,7 @@ final class FollowCell: UITableViewCell {
         }
     
     private func setupUI() {
-        backgroundColor = UIColor(named: Constants.blackWhiteColor)
+        backgroundColor = UIColor(named: Constants.blackWhiteColorName)
     }
     
 }

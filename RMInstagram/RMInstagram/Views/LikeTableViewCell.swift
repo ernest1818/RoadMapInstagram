@@ -8,23 +8,19 @@
 import UIKit
 
 /// Ячейка с уведомлением о лайке на пост
-class LikeTableViewCell: UITableViewCell {
+final class LikeTableViewCell: UITableViewCell {
     
     private enum Constants {
         static let blackWhiteColor = "blackColor"
         static let time = "2 минуты назад"
     }
     
-    // MARK: - Public IBOutlets
-    @IBOutlet weak var userImageView: UIImageView!
-    @IBOutlet weak var likeLabel: UILabel!
-    @IBOutlet weak var contentImage: UIImageView!
+    // MARK: - Private IBOutlets
+    @IBOutlet private weak var userImageView: UIImageView!
+    @IBOutlet private weak var likeLabel: UILabel!
+    @IBOutlet private weak var contentImageView: UIImageView!
     
     // MARK: - Life cycles
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         setupUI()
@@ -35,7 +31,7 @@ class LikeTableViewCell: UITableViewCell {
         userImageView.image = UIImage(named: model.userImageName )
         likeLabel.text = "\(model.userName) \(model.userAction.rawValue) \(model.time ?? "")"
         likeLabel.attributedText = setupDeliveryDateLabel(post: model)
-        contentImage.image = UIImage(named: model.contentImageName ?? "")
+        contentImageView.image = UIImage(named: model.contentImageName ?? "")
     }
     
     // MARK: - Private Methods

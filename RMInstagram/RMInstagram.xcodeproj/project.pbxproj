@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		88467645290066AB00FD3223 /* LikeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88467644290066AB00FD3223 /* LikeTableViewCell.swift */; };
-		884676472900823400FD3223 /* FollowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884676462900823400FD3223 /* FollowCell.swift */; };
+		884676472900823400FD3223 /* FollowViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884676462900823400FD3223 /* FollowViewCell.swift */; };
 		88467649290086BC00FD3223 /* UsersNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88467648290086BC00FD3223 /* UsersNotifications.swift */; };
 		8846764B290174DD00FD3223 /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846764A290174DD00FD3223 /* StoriesViewController.swift */; };
 		8846764F29027D0B00FD3223 /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8846764E29027D0B00FD3223 /* video.mov */; };
@@ -28,7 +28,7 @@
 
 /* Begin PBXFileReference section */
 		88467644290066AB00FD3223 /* LikeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeTableViewCell.swift; sourceTree = "<group>"; };
-		884676462900823400FD3223 /* FollowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowCell.swift; sourceTree = "<group>"; };
+		884676462900823400FD3223 /* FollowViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewCell.swift; sourceTree = "<group>"; };
 		88467648290086BC00FD3223 /* UsersNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersNotifications.swift; sourceTree = "<group>"; };
 		8846764A290174DD00FD3223 /* StoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
 		8846764E29027D0B00FD3223 /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 				88571BB728FEB480001D081E /* ReccomendationTableViewCell.swift */,
 				88571BB028FD8722001D081E /* HomeTableViewCell.swift */,
 				88467644290066AB00FD3223 /* LikeTableViewCell.swift */,
-				884676462900823400FD3223 /* FollowCell.swift */,
+				884676462900823400FD3223 /* FollowViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,7 +233,7 @@
 				88467649290086BC00FD3223 /* UsersNotifications.swift in Sources */,
 				88571BC229003253001D081E /* NotificationViewController.swift in Sources */,
 				88467645290066AB00FD3223 /* LikeTableViewCell.swift in Sources */,
-				884676472900823400FD3223 /* FollowCell.swift in Sources */,
+				884676472900823400FD3223 /* FollowViewCell.swift in Sources */,
 				8846764B290174DD00FD3223 /* StoriesViewController.swift in Sources */,
 				88571BB128FD8722001D081E /* HomeTableViewCell.swift in Sources */,
 				88571BB628FDF9A0001D081E /* UsersInProject.swift in Sources */,

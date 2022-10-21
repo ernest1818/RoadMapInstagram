@@ -18,10 +18,10 @@ final class StoriesViewController: UIViewController {
     }
     
     // MARK: - Private IBOutlets
-    @IBOutlet weak var contentImage: UIImageView!
+    @IBOutlet private weak var contentImageView: UIImageView!
     @IBOutlet private weak var storiesProgressView: UIProgressView!
     @IBOutlet private weak var userImageView: UIImageView!
-    @IBOutlet weak var secondProgressView: UIProgressView!
+    @IBOutlet private weak var secondProgressView: UIProgressView!
     @IBOutlet private weak var userNameLabel: UILabel!
     
     // MARK: - Public properties
@@ -38,11 +38,7 @@ final class StoriesViewController: UIViewController {
         createVideoplayer()
         setupUI()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
+   
     // MARK: - Private IBActions
     @IBAction private func closedAction(_ sender: Any) {
         dismiss(animated: true)
@@ -78,7 +74,7 @@ final class StoriesViewController: UIViewController {
     @objc private func progressAction() {
         storiesProgressView.progress += 0.0001
         if storiesProgressView.progress == 1 {
-            contentImage.image = nil
+            contentImageView.image = nil
             timer.invalidate()
             let interval = CMTime(seconds: 0.0001, preferredTimescale: CMTimeScale(NSEC_PER_SEC))
             player.addPeriodicTimeObserver(forInterval: interval, queue: .main) { [weak self] _ in
@@ -89,8 +85,8 @@ final class StoriesViewController: UIViewController {
                 }
             }
             let playerLayer = AVPlayerLayer(player: player)
-            playerLayer.frame = contentImage.bounds
-            contentImage.layer.addSublayer(playerLayer)
+            playerLayer.frame = contentImageView.bounds
+            contentImageView.layer.addSublayer(playerLayer)
             player.play()
             storiesProgressView.setProgress(1, animated: false)
         }

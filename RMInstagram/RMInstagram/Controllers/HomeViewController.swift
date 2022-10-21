@@ -14,7 +14,6 @@ final class HomeViewController: UIViewController {
         static let segueIdentifire = "stories"
         static let cellIdentifire = "oneCell"
         static let scrollCellIdentifire = "scrollCell"
-        static let likeText = "Нравиться: "
         static let firstUserName = "valka.kalash"
         static let userImageName = "1"
         static let firstUsersImageName = "scroll1"
@@ -38,13 +37,13 @@ final class HomeViewController: UIViewController {
         static let secondContentLikeCount = 20
         static let therdContentLikeCount = 349
         static let fourContentLikeCount = 890
-        static let storiesColor = "storiesColor"
-        static let borderdColor = "myLightGray"
+        static let storiesColorName = "storiesColor"
+        static let borderdColorName = "myLightGray"
     }
     
     // MARK: - IBOutlets
     @IBOutlet private weak var homeTableView: UITableView!
-    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet private weak var firstNameLabel: UILabel!
     @IBOutlet private weak var myImageView: UIImageView!
     
     // MARK: - Private variables
@@ -85,11 +84,6 @@ final class HomeViewController: UIViewController {
         }
         storiesVC.nameText = Constants.firstName
         storiesVC.imageName = Constants.firstAvatarImageName
-        
-    }
-    
-    // MARK: - Private IBActions
-    @IBAction private func lizaAction(_ sender: Any) {
         
     }
     
@@ -143,10 +137,6 @@ extension HomeViewController: UITableViewDataSource {
                                                              
                                                              for: indexPath) as? ReccomendationTableViewCell
             else { return UITableViewCell() }
-            scrollCell.firstContainerView.layer.borderColor = UIColor(named: Constants.storiesColor)?.cgColor
-            scrollCell.secondContainerView.layer.borderColor = UIColor(named: Constants.storiesColor)?.cgColor
-            scrollCell.therdContainerView.layer.borderColor = UIColor(named: Constants.storiesColor)?.cgColor
-            scrollCell.fourContainerView.layer.borderColor = UIColor(named: Constants.storiesColor)?.cgColor
             return scrollCell
             
         } else {
@@ -155,39 +145,11 @@ extension HomeViewController: UITableViewDataSource {
                 
                 let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifire,
                                                          for: indexPath) as? HomeTableViewCell
-            else { return UITableViewCell() }
-            let discription = users[indexPath.row].contentDiscription
-            let userImage = UIImage(named: users[indexPath.row].userImageName ?? "")
-            let contentImsge = UIImage(named: users[indexPath.row].contentImageName ?? "")
-            let name = users[indexPath.row].name ?? ""
-            
-            cell.nameLabel.text = users[indexPath.row].name
-            cell.contentImageView.image = contentImsge
-            cell.avatarImageView.image = userImage
-            cell.commentAvatarImageView.image = UIImage(named: Constants.userImageName)
-            cell.likeCountLabel.text = "\(Constants.likeText) \(users[indexPath.row].contentLikeCount ?? 0)"
-            cell.discriptionLabel.text = name + " " + (discription ?? "")
-            cell.discriptionLabel.attributedText = setupDeliveryDateLabel(post: users[indexPath.row])
+            else {
+                return UITableViewCell()
+            }
+            cell.setupContent(users[indexPath.row])
             return cell
         }
-    }
-}
-
-extension HomeViewController {
-    func setupDeliveryDateLabel(post: Users) -> NSMutableAttributedString {
-        let secondText = "\(post.contentDiscription ?? "")"
-        let myMutableString = NSMutableAttributedString(string:
-                                                            "\(post.name ?? "") \(secondText)")
-        myMutableString.addAttribute(
-            NSAttributedString.Key.font,
-            value: UIFont.systemFont(ofSize: 14, weight: .bold),
-            range: NSRange(location: 0, length: post.name?.count ?? 0)
-        )
-        myMutableString.addAttribute(
-            NSAttributedString.Key.font,
-            value: UIFont.systemFont(ofSize: 14, weight: .regular),
-            range: NSRange(location: post.name?.count ?? 0, length: secondText.count)
-        )
-        return myMutableString
     }
 }
