@@ -11,14 +11,16 @@ import UIKit
 final class HomeViewController: UIViewController {
     
     private enum Constants {
+        static let segueIdentifire = "stories"
         static let cellIdentifire = "oneCell"
         static let scrollCellIdentifire = "scrollCell"
-        static let likeText = "Нравиться: "
         static let firstUserName = "valka.kalash"
         static let userImageName = "1"
         static let firstUsersImageName = "scroll1"
         static let firstContentImageName = "11"
         static let firstContentDiscription = "как тебе такое Илон Маск"
+        static let firstName = "liza.boss"
+        static let firstAvatarImageName = "3"
         static let firstContentLikeCount = 123
         static let secondUserName = "moroz.pochyi"
         static let therdUserName = "garri.gudini777"
@@ -35,12 +37,13 @@ final class HomeViewController: UIViewController {
         static let secondContentLikeCount = 20
         static let therdContentLikeCount = 349
         static let fourContentLikeCount = 890
-        static let storiesColor = "storiesColor"
-        static let borderdColor = "myLightGray"
+        static let storiesColorName = "storiesColor"
+        static let borderdColorName = "myLightGray"
     }
     
     // MARK: - IBOutlets
     @IBOutlet private weak var homeTableView: UITableView!
+    @IBOutlet private weak var firstNameLabel: UILabel!
     @IBOutlet private weak var myImageView: UIImageView!
     
     // MARK: - Private variables
@@ -72,11 +75,28 @@ final class HomeViewController: UIViewController {
         setupUI()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == Constants.segueIdentifire else { return }
+        guard
+            let storiesVC = segue.destination as? StoriesViewController
+        else {
+            return
+        }
+        storiesVC.nameText = Constants.firstName
+        storiesVC.imageName = Constants.firstAvatarImageName
+        
+    }
+    
     // MARK: - Private Methods
     private func setupUI() {
         createTableView()
         createProfile()
         createRefresh()
+        createFirstLabel()
+    }
+    
+    private func createFirstLabel() {
+        firstNameLabel.text = Constants.firstName
     }
     
     private func createTableView() {
@@ -117,10 +137,6 @@ extension HomeViewController: UITableViewDataSource {
                                                              
                                                              for: indexPath) as? ReccomendationTableViewCell
             else { return UITableViewCell() }
-            scrollCell.firstContainerView.layer.borderColor = UIColor(named: Constants.storiesColor)?.cgColor
-            scrollCell.secondContainerView.layer.borderColor = UIColor(named: Constants.storiesColor)?.cgColor
-            scrollCell.therdContainerView.layer.borderColor = UIColor(named: Constants.storiesColor)?.cgColor
-            scrollCell.fourContainerView.layer.borderColor = UIColor(named: Constants.storiesColor)?.cgColor
             return scrollCell
             
         } else {
@@ -129,18 +145,10 @@ extension HomeViewController: UITableViewDataSource {
                 
                 let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifire,
                                                          for: indexPath) as? HomeTableViewCell
-            else { return UITableViewCell() }
-            let discription = users[indexPath.row].contentDiscription
-            let userImage = UIImage(named: users[indexPath.row].userImageName ?? "")
-            let contentImsge = UIImage(named: users[indexPath.row].contentImageName ?? "")
-            let name = users[indexPath.row].name ?? ""
-            
-            cell.nameLabel.text = users[indexPath.row].name
-            cell.contentImageView.image = contentImsge
-            cell.avatarImageView.image = userImage
-            cell.commentAvatarImageView.image = UIImage(named: Constants.userImageName)
-            cell.likeCountLabel.text = "\(Constants.likeText) \(users[indexPath.row].contentLikeCount ?? 0)"
-            cell.discriptionLabel.text = name + " " + (discription ?? "")
+            else {
+                return UITableViewCell()
+            }
+            cell.setupContent(users[indexPath.row])
             return cell
         }
     }
