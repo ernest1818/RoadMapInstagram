@@ -55,7 +55,7 @@ final class StoriesViewController: UIViewController {
     }
     
     private func createVideoplayer() {
-        guard let url = Bundle.main.url(forResource: "video", withExtension: "MOV") else { return }
+        guard let url = Bundle.main.url(forResource: "video", withExtension: "mov") else { return }
         let item = AVPlayerItem(url: url)
         player = AVPlayer(playerItem: item)
         

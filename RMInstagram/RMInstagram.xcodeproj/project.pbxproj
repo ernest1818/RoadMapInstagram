@@ -11,7 +11,7 @@
 		884676472900823400FD3223 /* FollowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884676462900823400FD3223 /* FollowCell.swift */; };
 		88467649290086BC00FD3223 /* UsersNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88467648290086BC00FD3223 /* UsersNotifications.swift */; };
 		8846764B290174DD00FD3223 /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846764A290174DD00FD3223 /* StoriesViewController.swift */; };
-		8846764D2901D18D00FD3223 /* video.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 8846764C2901D18D00FD3223 /* video.MOV */; };
+		8846764F29027D0B00FD3223 /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8846764E29027D0B00FD3223 /* video.mov */; };
 		88571B9C28FD61E0001D081E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88571B9B28FD61E0001D081E /* AppDelegate.swift */; };
 		88571B9E28FD61E0001D081E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88571B9D28FD61E0001D081E /* SceneDelegate.swift */; };
 		88571BA028FD61E0001D081E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88571B9F28FD61E0001D081E /* HomeViewController.swift */; };
@@ -31,7 +31,7 @@
 		884676462900823400FD3223 /* FollowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowCell.swift; sourceTree = "<group>"; };
 		88467648290086BC00FD3223 /* UsersNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersNotifications.swift; sourceTree = "<group>"; };
 		8846764A290174DD00FD3223 /* StoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
-		8846764C2901D18D00FD3223 /* video.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.MOV; sourceTree = "<group>"; };
+		8846764E29027D0B00FD3223 /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
 		88571B9828FD61E0001D081E /* RMInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88571B9B28FD61E0001D081E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88571B9D28FD61E0001D081E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 				88571BA128FD61E0001D081E /* Main.storyboard */,
 				88571BBE28FF4C7F001D081E /* Controllers */,
 				88571BA428FD61E1001D081E /* Assets.xcassets */,
-				8846764C2901D18D00FD3223 /* video.MOV */,
+				8846764E29027D0B00FD3223 /* video.mov */,
 				88571BA628FD61E1001D081E /* LaunchScreen.storyboard */,
 				88571BA928FD61E1001D081E /* Info.plist */,
 				88571BB228FDE4A8001D081E /* Fonts */,
@@ -192,9 +192,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				88571BA828FD61E1001D081E /* LaunchScreen.storyboard in Resources */,
-				8846764D2901D18D00FD3223 /* video.MOV in Resources */,
 				88571BA528FD61E1001D081E /* Assets.xcassets in Resources */,
 				88571BA328FD61E0001D081E /* Main.storyboard in Resources */,
+				8846764F29027D0B00FD3223 /* video.mov in Resources */,
 				88571BB428FDE4CE001D081E /* SFProText-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,6 @@ final class FollowCell: UITableViewCell {
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var followLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
