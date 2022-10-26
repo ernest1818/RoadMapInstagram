@@ -24,6 +24,15 @@
 		88571BB828FEB480001D081E /* ReccomendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88571BB728FEB480001D081E /* ReccomendationTableViewCell.swift */; };
 		88571BBC28FEF9F4001D081E /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88571BBB28FEF9F4001D081E /* ReelsViewController.swift */; };
 		88571BC229003253001D081E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88571BC129003253001D081E /* NotificationViewController.swift */; };
+		88C267F62903CC34006DAE16 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C267F52903CC34006DAE16 /* SearchViewController.swift */; };
+		88C267F82903CE8E006DAE16 /* AccountViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C267F72903CE8E006DAE16 /* AccountViewCell.swift */; };
+		88C267FB2903E45C006DAE16 /* DiscriptionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C267F92903E45C006DAE16 /* DiscriptionViewCell.swift */; };
+		88C267FC2903E45C006DAE16 /* DiscriptionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C267FA2903E45C006DAE16 /* DiscriptionViewCell.xib */; };
+		88C267FE29040C2E006DAE16 /* TopicalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C267FD29040C2E006DAE16 /* TopicalViewCell.swift */; };
+		88C2680029042389006DAE16 /* FotoContentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C267FF29042389006DAE16 /* FotoContentViewCell.swift */; };
+		88C268022904266E006DAE16 /* FotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C268012904266E006DAE16 /* FotoCollectionViewCell.swift */; };
+		88C268042904267B006DAE16 /* TopicalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C268032904267B006DAE16 /* TopicalCollectionViewCell.swift */; };
+		88C2680629047BA1006DAE16 /* Prifile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C2680529047BA1006DAE16 /* Prifile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +55,15 @@
 		88571BB728FEB480001D081E /* ReccomendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReccomendationTableViewCell.swift; sourceTree = "<group>"; };
 		88571BBB28FEF9F4001D081E /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
 		88571BC129003253001D081E /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		88C267F52903CC34006DAE16 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		88C267F72903CE8E006DAE16 /* AccountViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewCell.swift; sourceTree = "<group>"; };
+		88C267F92903E45C006DAE16 /* DiscriptionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscriptionViewCell.swift; sourceTree = "<group>"; };
+		88C267FA2903E45C006DAE16 /* DiscriptionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscriptionViewCell.xib; sourceTree = "<group>"; };
+		88C267FD29040C2E006DAE16 /* TopicalViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicalViewCell.swift; sourceTree = "<group>"; };
+		88C267FF29042389006DAE16 /* FotoContentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoContentViewCell.swift; sourceTree = "<group>"; };
+		88C268012904266E006DAE16 /* FotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		88C268032904267B006DAE16 /* TopicalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicalCollectionViewCell.swift; sourceTree = "<group>"; };
+		88C2680529047BA1006DAE16 /* Prifile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prifile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +126,7 @@
 				88571B9F28FD61E0001D081E /* HomeViewController.swift */,
 				88571BC129003253001D081E /* NotificationViewController.swift */,
 				88571BBB28FEF9F4001D081E /* ReelsViewController.swift */,
+				88C267F52903CC34006DAE16 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -119,6 +138,13 @@
 				88571BB028FD8722001D081E /* HomeTableViewCell.swift */,
 				88467644290066AB00FD3223 /* LikeTableViewCell.swift */,
 				884676462900823400FD3223 /* FollowViewCell.swift */,
+				88C267F72903CE8E006DAE16 /* AccountViewCell.swift */,
+				88C267F92903E45C006DAE16 /* DiscriptionViewCell.swift */,
+				88C267FA2903E45C006DAE16 /* DiscriptionViewCell.xib */,
+				88C267FD29040C2E006DAE16 /* TopicalViewCell.swift */,
+				88C268032904267B006DAE16 /* TopicalCollectionViewCell.swift */,
+				88C267FF29042389006DAE16 /* FotoContentViewCell.swift */,
+				88C268012904266E006DAE16 /* FotoCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +154,7 @@
 			children = (
 				88571BB528FDF9A0001D081E /* UsersInProject.swift */,
 				88467648290086BC00FD3223 /* UsersNotifications.swift */,
+				88C2680529047BA1006DAE16 /* Prifile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88571BA828FD61E1001D081E /* LaunchScreen.storyboard in Resources */,
+				88C267FC2903E45C006DAE16 /* DiscriptionViewCell.xib in Resources */,
 				88571BA528FD61E1001D081E /* Assets.xcassets in Resources */,
 				88571BA328FD61E0001D081E /* Main.storyboard in Resources */,
 				8846764F29027D0B00FD3223 /* video.mov in Resources */,
@@ -229,15 +257,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				88571BA028FD61E0001D081E /* HomeViewController.swift in Sources */,
+				88C2680029042389006DAE16 /* FotoContentViewCell.swift in Sources */,
 				88571B9C28FD61E0001D081E /* AppDelegate.swift in Sources */,
 				88467649290086BC00FD3223 /* UsersNotifications.swift in Sources */,
 				88571BC229003253001D081E /* NotificationViewController.swift in Sources */,
 				88467645290066AB00FD3223 /* LikeTableViewCell.swift in Sources */,
 				884676472900823400FD3223 /* FollowViewCell.swift in Sources */,
+				88C2680629047BA1006DAE16 /* Prifile.swift in Sources */,
+				88C267F82903CE8E006DAE16 /* AccountViewCell.swift in Sources */,
+				88C267FE29040C2E006DAE16 /* TopicalViewCell.swift in Sources */,
 				8846764B290174DD00FD3223 /* StoriesViewController.swift in Sources */,
 				88571BB128FD8722001D081E /* HomeTableViewCell.swift in Sources */,
+				88C267F62903CC34006DAE16 /* SearchViewController.swift in Sources */,
+				88C268042904267B006DAE16 /* TopicalCollectionViewCell.swift in Sources */,
+				88C268022904266E006DAE16 /* FotoCollectionViewCell.swift in Sources */,
 				88571BB628FDF9A0001D081E /* UsersInProject.swift in Sources */,
 				88571BBC28FEF9F4001D081E /* ReelsViewController.swift in Sources */,
+				88C267FB2903E45C006DAE16 /* DiscriptionViewCell.swift in Sources */,
 				88571BB828FEB480001D081E /* ReccomendationTableViewCell.swift in Sources */,
 				88571B9E28FD61E0001D081E /* SceneDelegate.swift in Sources */,
 			);
