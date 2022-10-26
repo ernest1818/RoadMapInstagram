@@ -7,10 +7,19 @@
 
 import UIKit
 
-/// Ячейка с отображение коллекции контента актуальных сторис
+/// Ячейка для актуальной истории
 final class TopicalCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var topicalImageView: UIImageView!
-    @IBOutlet weak var topicalLabel: UILabel!
+    // MARK: - Private IBOutlet
+    @IBOutlet private weak var topicalImageView: UIImageView!
+    @IBOutlet private weak var topicalLabel: UILabel!
     
+    // MARK: - PublicProperties
+    
+    func configure(_ text: String, _ imageName: String) {
+        topicalLabel.text = text
+        topicalImageView.layer.borderWidth = 2
+        topicalImageView.layer.borderColor = UIColor.systemBackground.cgColor
+        topicalImageView.image = UIImage(named: imageName)
+    }
 }

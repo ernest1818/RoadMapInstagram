@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// Ячейка с фото - видео контентом
+/// Ячейка с коллекцией фото и видео
 final class FotoContentViewCell: UITableViewCell {
     
     private enum Constants {
@@ -21,10 +21,6 @@ final class FotoContentViewCell: UITableViewCell {
     private let profileInfo = UserProfile(topicalStories: TopicalStories())
     
     // MARK: - Lyfe Cycles
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         setupUI()
@@ -57,7 +53,7 @@ extension FotoContentViewCell: UICollectionViewDataSource {
         else {
             return UICollectionViewCell()
         }
-        item.contentImageView.image = UIImage(named: imageName)
+        item.configure(imageName)
         return item
     }
 }

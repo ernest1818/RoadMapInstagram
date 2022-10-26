@@ -15,10 +15,6 @@ final class AccountViewCell: UITableViewCell {
     @IBOutlet private weak var avatarButton: UIButton!
     
     // MARK: - Life Cycles
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         setupUI()

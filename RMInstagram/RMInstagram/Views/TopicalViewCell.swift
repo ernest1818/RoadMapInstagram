@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// Ячейка с контентом историй "Актуальное"
+/// Ячейка с коллекцией историй
 final class TopicalViewCell: UITableViewCell {
 
     private enum Constants {
@@ -28,13 +28,8 @@ final class TopicalViewCell: UITableViewCell {
     
     // MARK: - Private Methods
     private func setupUI() {
-        createCollectionView()
-    }
-    
-    private func createCollectionView() {
         collectionView.dataSource = self
     }
-
 }
 
 // MARK: - UICollectionViewDataSource
@@ -53,10 +48,7 @@ extension TopicalViewCell: UICollectionViewDataSource {
         else {
             return UICollectionViewCell()
         }
-        item.topicalLabel.text = text
-        item.topicalImageView.layer.borderWidth = 2
-        item.topicalImageView.layer.borderColor = UIColor.systemBackground.cgColor
-        item.topicalImageView.image = UIImage(named: imageName)
+        item.configure(text, imageName)
         return item
     }
 }

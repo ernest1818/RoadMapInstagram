@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// Экран поиска контента
+/// Экран отображающий страницу юзера
 final class SearchViewController: UIViewController {
 
     private enum Constants {
@@ -28,10 +28,12 @@ final class SearchViewController: UIViewController {
     // MARK: - Private IBOutlets
     @IBOutlet weak var searchTableView: UITableView!
     
-    // MARK: - Private Properties
-    private let cellTypes: [TableCellType] = [.accountCell, .discriptionCell, .topicalCell, .contentCell]
+    // MARK: - Private Visual Component
     private let refreshControl = UIRefreshControl()
     
+    // MARK: - Private Properties
+    private let cellTypes: [TableCellType] = [.accountCell, .discriptionCell, .topicalCell, .contentCell]
+  
     // MARK: - Life cycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +52,6 @@ final class SearchViewController: UIViewController {
                                  forCellReuseIdentifier: Constants.discriptionIdentifire)
         searchTableView.estimatedRowHeight = UITableView.automaticDimension
         searchTableView.allowsSelection = false
-        searchTableView.scrollIndicatorInsets = UIEdgeInsets(top: <#T##CGFloat#>, left: <#T##CGFloat#>, bottom: <#T##CGFloat#>, right: <#T##CGFloat#>)
     }
     
     private func createRefresh() {

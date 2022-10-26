@@ -7,8 +7,15 @@
 
 import UIKit
 
-/// Ячейка с отображением коллекции фото и видео
+/// Ячейка для фото и видео контента
 final class FotoCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var contentImageView: UIImageView!
+    // MARK: - Private Outlet
+    @IBOutlet private weak var contentImageView: UIImageView!
+    
+    // MARK: - Public Methods
+    
+    func configure(_ userProfile: String) {
+        contentImageView.image = UIImage(named: userProfile)
+    }
 }
